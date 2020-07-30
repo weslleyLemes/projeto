@@ -32,8 +32,8 @@
             <tbody>
                 <tr *ngFor="let item of estoqueItens ">
                     <td>{{item.ativo}}</td>
-                    <td>{{item.resultado}}</td>
-                    <td>{{item.exposisao}}</td>
+                    <td>{{item.resultado | number : '1.2-2'}}</td>
+                    <td>{{item.exposisao | number : '1.2-2'}}</td>
                 </tr>
             </tbody>
         </table>
@@ -61,8 +61,9 @@
                 <label for="precoFechamento">Preço de fechamento</label>
                 <input #precoFechamento type="number" min="0.00" step="0.01" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary" style="position: relative;" (click)="onSubmit($event)">Submit</button>
+
         </form>
+        <button type="submit" class="btn btn-primary" style="position: relative;" (click)="onSubmit($event)">Submit</button>
     </div>
 
 
