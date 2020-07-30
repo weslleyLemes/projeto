@@ -72,12 +72,17 @@
         "cross-env": "7.0.2",
         "cross-var": "1.1.0",
         "devtron": "1.4.0",
+        "electron": "8.2.5",
+        "electron-builder": "22.6.0",
+        "electron-packager": "14.2.1",
+        "electron-reload": "1.5.0",
         "eslint": "6.8.0",
         "eslint-plugin-import": "2.20.2",
         "jasmine-core": "3.5.0",
         "jasmine-spec-reporter": "5.0.2",
         "karma": "5.0.4",
         "karma-coverage-istanbul-reporter": "3.0.0",
+        "karma-electron": "6.3.0",
         "karma-jasmine": "3.1.1",
         "karma-jasmine-html-reporter": "1.5.3",
         "mocha": "7.1.2",
@@ -95,7 +100,8 @@
         "node": ">=10.13.0"
     },
     "dependencies": {
-        "@angular/cdk": "^9.2.4",
+        "@angular/animations": "^9.0.0 || ^10.0.0-0",
+        "@angular/cdk": "9.2.4",
         "@angular/forms": "^9.0.0 || ^10.0.0-0",
         "@angular/material": "9.2.4",
         "bootstrap": "4.5.0"
