@@ -1,0 +1,8 @@
+{
+    " nome ": " angular-cli-elétron ",
+    " productName ": " CLI angular + elétron ",
+    " version ": " 1.0.0 ",
+    " description ": " CLI angular + elétron ",
+    " main ": " main.js ",
+    " licença ": " MIT "
+}

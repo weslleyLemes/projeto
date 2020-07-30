@@ -1,0 +1,69 @@
+<div class="container2">
+    <h1 class="title">
+        Carteira de Ativos
+    </h1>
+
+
+    <button type="button" class="btn btn-warning" (click)="openEstoque()">Estoque</button>
+
+    <button type="button" class="btn btn-success" (click)="openForm()">Compra e Venda</button>
+
+    <button type="button" class="btn btn-warning" (click)="getTotal()">Resultado e a exposição total da carteira</button>
+
+
+
+    <div *ngIf="totalBool">
+        <table class="table table-dark" style="border-radius: 10px;">
+            <h3>Preço total:</h3>
+            {{total | number : '1.2-2'}} R$
+        </table>
+    </div>
+
+
+    <div *ngIf="estoque" style="overflow-y:scroll;">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Ativo</th>
+                    <th scope="col">Resultados</th>
+                    <th scope="col">Exposição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of estoqueItens ">
+                    <td>{{item.ativo}}</td>
+                    <td>{{item.resultado}}</td>
+                    <td>{{item.exposisao}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background-color: aliceblue; width: 500px; border-radius: 20px;" *ngIf="formBool">
+        <form>
+            <div class="form-group">
+                <label for="tipoAtivo">Tipo de Ativo</label>
+                <select #tipoAtivo class="form-control" id="exampleFormControlSelect1">
+                  <option>Ativo A</option>
+                  <option>Ativo B</option>
+                  <option>Ativo C</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input #quantidade type="number" min="0.00" max="10000.00" step="0.01" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="precoAbertura">Preço de abertura</label>
+                <input #precoAbertura type="number" min="0.00" max="10000.00" step="0.01" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="precoFechamento">Preço de fechamento</label>
+                <input #precoFechamento type="number" min="0.00" step="0.01" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" style="position: relative;" (click)="onSubmit($event)">Submit</button>
+        </form>
+    </div>
+
+
+</div>
